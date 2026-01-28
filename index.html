@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/header.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <title>Landing page</title>
+</head>
+<body>
+    <header>
+    <nav id="navi">
+        <i class="fa-solid fa-bars" id="navi_logo"></i> 
+
+        <ul id="navi_links">
+            <li class="navi-item active"><a href="#home" class="navi-item">Home</a></li>
+            <li><a href="#about" class="navi-item">Sobre</a></li>
+            <li><a href="#services" class="navi-item">Serviços</a></li>
+            <li><a href="#contact" class="navi-item">Contato</a></li>
+        </ul>
+
+        <button class="btn-default">
+            Solicitar Orçamento
+        </button>
+
+        <!-- Mobile -->
+        <button id="mobile_btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile -->
+    <div id="mobile_menu" class="hidden">
+        <ul id="mobile_links">
+            <li class="mobile-item active"><a href="#home" class="mobile-item">Home</a></li>
+            <li><a href="#about" class="navi-item">Sobre</a></li>
+            <li><a href="#services" class="navi-item">Serviços</a></li>
+            <li><a href="#contact" class="navi-item">Contato</a></li>
+        </ul>
+    </div>
+</header>
+
+    
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>
