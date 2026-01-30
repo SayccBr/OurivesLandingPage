@@ -3,12 +3,13 @@ header {
     display: flex;
     justify-content: center;
     padding: 20px 0;
+    background-color: rgb(236, 234, 234);
 }
 
 
 #navi {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1118px;
     display: flex;
     align-items: center;
     justify-content: space-between;

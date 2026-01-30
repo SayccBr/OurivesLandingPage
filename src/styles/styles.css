@@ -8,9 +8,18 @@
   box-sizing: border-box;
 }
 
+body{
+    background-color: rgb(128, 124, 124);
+}
+
+section{
+    padding: 28px 20%;
+}
+
 /* Botão */
 .btn-default {
     padding: 10px 12px;
+    align-content: center;
     border: none;
     border-radius: 12px;
     background-color: #e9a209;

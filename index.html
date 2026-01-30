@@ -4,27 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="src/styles/styles.css">
     <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/home.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <title>Landing page</title>
 </head>
 <body>
+
     <header>
     <nav id="navi">
-        <i class="fa-solid fa-bars" id="navi_logo"></i> 
+        <i class="fa-solid fa-crown" id="navi_logo">adao ourives</i> 
 
         <ul id="navi_links">
-            <li class="navi-item active"><a href="#home" class="navi-item">Home</a></li>
+            <li class="navi-item active"><a href="#colecoes" class="navi-item">Coleções</a></li>
             <li><a href="#about" class="navi-item">Sobre</a></li>
             <li><a href="#services" class="navi-item">Serviços</a></li>
             <li><a href="#contact" class="navi-item">Contato</a></li>
         </ul>
-
-        <button class="btn-default">
-            Solicitar Orçamento
-        </button>
 
         <!-- Mobile -->
         <button id="mobile_btn">
@@ -33,7 +31,7 @@
     </nav>
 
     <!-- Mobile -->
-    <div id="mobile_menu" class="hidden">
+    <div id="mobile_menu" class="">
         <ul id="mobile_links">
             <li class="mobile-item active"><a href="#home" class="mobile-item">Home</a></li>
             <li><a href="#about" class="navi-item">Sobre</a></li>
@@ -41,9 +39,56 @@
             <li><a href="#contact" class="navi-item">Contato</a></li>
         </ul>
     </div>
-</header>
+    </header>
 
-    
+    <main id="content">
+
+    <section id="home" class="relative h-screen flex items-center">
+        <div id="cta" class="container mx-auto px-8 z-10">
+            <div class="mb-8" id="cta_text">
+                <h1 class="title text-9xl font-bold text-white mb-2">ADÃO OURIVES</h1>
+                <p class="text-white/100 font-bold">Há mais de três décadas criando peças únicas que contam histórias. Cada joia é uma obra de arte, feita à mão com materiais preciosos selecionados criteriosamente.</p>
+            </div>
+
+        <div id="cta_buttons" class="flex items-center">  
+            <div class="mb-4">
+                <a href="#collections" class="btn-default">Ver Coleções</a>
+            </div>
+
+            <div class="btn_whatsapp">
+                <button class="btn-default">
+                    <i class="fa-brands fa-whatsapp text-green-400 font-bold"></i>
+                    <span>+55 64 98409-4757</span>
+                </button>
+            </div>
+        </div> 
+
+        </div>
+    </section>
+
+
+    <section id="colecoes">
+        <h2 class="text-center section-title text-6xl">Nossas Coleções</h2>
+        <h3 class="text-center section-subtitle text-2xl">Peças que Encantam</h3>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Adão Ourives. Todos os direitos reservados.</p>
+    </footer>
+
     <script src="src/javascript/script.js"></script>
+    
 </body>
 </html>

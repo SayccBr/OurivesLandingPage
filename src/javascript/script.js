@@ -1,15 +1,14 @@
 /* 
   Mobile menu toggle com jQuery
-*/
 $(document).ready(function() {
     $('#mobile_btn').on('click', function() {
         $('#mobile_menu').toggleClass('active');
         $('#mobile_btn').find('i').toggleClass('fa-xmark fa-bars');
     });
 });
+*/
 
-
-/* JavaScript puro para toggle do menu mobile 
+/* JavaScript puro para toggle do menu mobile */
 
 document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("mobile_btn");
@@ -22,4 +21,3 @@ document.addEventListener("DOMContentLoaded", () => {
         icon.classList.toggle("fa-xmark");
     });
 });
-*/
