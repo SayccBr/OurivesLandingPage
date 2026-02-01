@@ -1,0 +1,36 @@
+#about {
+    display: flex;
+    flex-direction: row; /* Muda para linha (lado a lado) */
+    align-items: center;
+    justify-content: space-between; /* Espaça os elementos */
+    gap: 48px; 
+    min-height: 100vh;
+    background-color: rgb(95, 94, 94);
+}
+
+.about-tittle {
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+#about_card {
+    width: 50%; 
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    #about {
+        flex-direction: column; /* Empilha no mobile */
+    }
+    
+    #about_card {
+        width: 100%;
+    }
+
+    .about-tittle {
+        width: 100%;
+        text-align: center;
+    }
+}

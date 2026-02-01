@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="src/styles/styles.css">
     <link rel="stylesheet" href="src/styles/header.css">
     <link rel="stylesheet" href="src/styles/home.css">
+    <link rel="stylesheet" href="src/styles/collections.css">
+    <link rel="stylesheet" href="src/styles/about.css">
+    <link rel="stylesheet" href="src/styles/services.css">
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <title>Landing page</title>
-
-    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
 </head>
 <body>
 
@@ -70,55 +71,116 @@
     </section>
 
 
-    <section id="collections" class="">
-        <h2 class="text-center section-title text-2xl playfair-display-chique ">Exclusividade</h2>
-        <h3 class="text-center section-subtitle text-6xl montserrat-corpo">Nossas Coleções</h3>
+    <section id="collections">
+    <div>
+        <h2 class="text-center section-subtitle text-2xl playfair-display-chique ">Exclusividade</h2>
+        <h3 class="text-center section-title text-6xl montserrat-corpo">Nossas Coleções</h3>
+    </div>
         
-        <div class="container mx-auto">
+    <div class="container mx-auto">
         
         <!-- LightWidget para Instagram -->
         <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
         <iframe 
-            src="//lightwidget.com/widgets/39ee30117ebd5d43bccda6da5fe1dfce.html" 
+            src="//lightwidget.com/widgets/a41c212944df56fd880e132c4fd9c48b.html" 
             scrolling="no" 
             allowtransparency="true" 
             class="lightwidget-widget" 
             style="width:100%;border:0;overflow:hidden;">
         </iframe>
     
+    </div>
+    </section>
+
+    <section id="about">
+
+        <div class="about-tittle">
+            <div> 
+                <h2 class="section-subtitle text-2xl playfair-display-chique ">Quem somos?</h2>
+                <h3 class="section-title text-6xl montserrat-corpo">Há mais de 3 décadas</h3>
+            </div>
+
+            <p class="montserrat-corpo text-lg">A Adão Ourives é uma joalheria familiar que há mais de 30 anos se dedica a criar peças únicas e exclusivas. Fundada por Adão Cassiano, a empresa começou como um pequeno ateliê e cresceu graças à paixão pela arte da ourivesaria e ao compromisso com a qualidade .</p>
+            <p class="montserrat-corpo text-lg">Hoje, a Adão Ourives é reconhecida por sua habilidade artesanal e pelo design inovador, oferecendo uma ampla gama de joias que combinam tradição e modernidade. Cada peça é cuidadosamente elaborada para refletir a personalidade e o estilo de seus clientes.</p>
+            
+            <div class="flex gap-12">
+
+                <div>
+                    <span class="block text-5xl font-extrabold text-[#e9a209] playfair-display-chique">
+                        1500+
+                    </span>
+                    <span class="block text-lg playfair-display-chique">
+                        Peças criadas
+                    </span>
+                </div>
+
+                <div>
+                    <span class="block text-5xl font-extrabold text-[#e9a209] playfair-display-chique">
+                        100%
+                    </span>
+                    <span class="block text-lg playfair-display-chique">
+                        Satisfação
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        
+        <div id="about_card">
+    
+            <div class="">
+                <div class="product-card">
+                    <img src="src/assets/chef.png" alt="Anel de Ouro">
+                    <div class="overlay text-center">
+                        <h3>Anel Clássico</h3>
+                        <p>Ouro 18k</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="about" class="">
-        <h2 class="text-center section-title text-2xl playfair-display-chique ">Quem somos?</h2>
-        <h3 class="text-center section-subtitle text-6xl montserrat-corpo">Há mais de 3 décadas</h3>
-        
-        <div class="container mx-auto">
-    
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="product-card">
-                <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Anel de Ouro">
-                <div class="overlay">
-                    <h3>Anel Clássico</h3>
-                    <p>Ouro 18k</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Anel de Ouro">
-                <div class="overlay">
-                    <h3>Anel Clássico</h3>
-                    <p>Ouro 18k</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Anel de Ouro">
-                <div class="overlay">
-                    <h3>Anel Clássico</h3>
-                    <p>Ouro 18k</p>
-                </div>
-            </div>
-            <!-- mais produtos... -->
+
+    <section id="services">
+
+        <div class="tittle">
+            <h2 class="section-subtitle text-2xl playfair-display-chique ">Destreza</h2>
+            <h3 class="section-title text-6xl montserrat-corpo">Serviços Oferecidos</h3>
         </div>
+        
+        <div id="grid">
+    
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="product-card">
+                    <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Anel de Ouro">
+                    <div class="overlay">
+                        <h3>Anel Clássico</h3>
+                        <p>Ouro 18k</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Anel de Ouro">
+                    <div class="overlay">
+                        <h3>Anel Clássico</h3>
+                        <p>Ouro 18k</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Anel de Ouro">
+                    <div class="overlay">
+                        <h3>Anel Clássico</h3>
+                        <p>Ouro 18k</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Anel de Ouro">
+                    <div class="overlay">
+                        <h3>Anel Clássico</h3>
+                        <p>Ouro 18k</p>
+                    </div>
+                </div>
+                <!-- mais produtos... -->
+            </div>
         
         </div>
     </section>
@@ -136,8 +198,21 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Adão Ourives. Todos os direitos reservados.</p>
+        <div id="footer" class="flex flex-row justify-between bg-neutral-900">
+
+            <a href="#home">
+                <p class="text-yellow-500 mb-2 playfair-display-chique">ADÃO OURIVES</p>
+            </a>
+     
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <p class="text-white">&copy; 2024 Adão Ourives. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
 
     <script src="src/javascript/script.js"></script>
     

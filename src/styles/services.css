@@ -1,0 +1,9 @@
+#services {
+    background-color: rgb(32, 31, 31);
+    display: flex;
+}
+
+
+#grid {
+    width: 60%; /* Grid ocupa mais espaço */
+}
