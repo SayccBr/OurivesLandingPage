@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btn.addEventListener("click", () => {
         menu.classList.toggle("active");
+        
         icon.classList.toggle("fa-bars");
         icon.classList.toggle("fa-xmark");
     });

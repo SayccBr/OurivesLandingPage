@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="src/styles/collections.css">
     <link rel="stylesheet" href="src/styles/about.css">
     <link rel="stylesheet" href="src/styles/services.css">
+    <link rel="stylesheet" href="src/styles/contact.css">
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <title>Landing page</title>
@@ -187,31 +188,83 @@
 
 
 
+    <section id="contact">
+        <div class="contact-container">
 
+            <div class="contact-info">
+                <h2 class="section-subtitle playfair-display-chique">Contato & Localização</h2>
+                <h3 class="section-title montserrat-corpo">
+                    Visite nossa loja física
+                </h3>
 
+                <ul class="contact-list">
+                    <li>
+                        <strong>Endereço</strong>
+                        <span>Av. Pará, 395 – Centro<br>Iporá – GO, 76200-000</span>
+                    </li>
 
+                    <li>
+                        <strong>Telefone / WhatsApp</strong>
+                        <span>(64) 99989-7947</span>
+                    </li>
 
+                    <li>
+                        <strong>Horário de Atendimento</strong>
+                        <span>
+                            Segunda a Sexta: 8h às 17h<br>
+                            Sábado: 8h às 12h
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-location">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1913.3230597817844!2d-51.12085205345169!3d-16.442797534514387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9366bdc512b308df%3A0x4171a1b20ea8a2d4!2sAd%C3%A3o%20Ourives!5e0!3m2!1spt-BR!2sbr!4v1770040149095!5m2!1spt-BR!2sbr"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+    </section>
 
 
 
 
     </main>
 
-    <footer>
-        <div id="footer" class="flex flex-row justify-between bg-neutral-900">
+    <footer class="h-35 mx-auto bg-neutral-900 text-neutral-300 flex items-center">
+        <div class="w-full mx-auto">
+            <div class="flex items-center justify-between">
 
-            <a href="#home">
-                <p class="text-yellow-500 mb-2 playfair-display-chique">ADÃO OURIVES</p>
-            </a>
-     
-            <div class="social-media">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <!-- Marca -->
+                <a href="#home">
+                    <p class="text-2xl text-yellow-500 playfair-display-chique tracking-wide">
+                        ADÃO OURIVES
+                    </p>
+                </a>
+
+                <!-- Redes sociais -->
+                <div class="flex gap-8 text-2xl">
+                    <a href="#" class="hover:text-yellow-500 transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="hover:text-yellow-500 transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+
+                <!-- Direitos -->
+                <p class="text-sm text-neutral-400">
+                    © 2024 Adão Ourives. Todos os direitos reservados.
+                </p>
+
             </div>
-
-            <p class="text-white">&copy; 2024 Adão Ourives. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+
 
 
     <script src="src/javascript/script.js"></script>
