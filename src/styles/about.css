@@ -5,7 +5,7 @@
     justify-content: space-between; /* Espaça os elementos */
     gap: 48px; 
     min-height: 100vh;
-    background-color: rgb(95, 94, 94);
+    background-color: rgb(73, 73, 73);
 }
 
 .about-tittle {

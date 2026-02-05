@@ -3,7 +3,7 @@ header {
     display: flex;
     justify-content: center;
     padding: 20px 0;
-    background-color: #e7e6e2;
+    background-color: var(--color-neutral-900); /* oklch(20.5% 0 0) */
     position: sticky;
     top: 0;
     z-index: 3;
@@ -37,7 +37,7 @@ header {
 .navi-item {
     text-decoration: none;
     font-weight: 700;
-    color: #0c0c0c;
+    color: #b3b3b1;
 }
 
 .navi-item:hover {

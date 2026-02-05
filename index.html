@@ -23,10 +23,10 @@
         <i class="fa-solid fa-crown" id="navi_logo">adao ourives</i> 
 
         <ul id="navi_links">
-            <li class="navi-item active"><a href="#collections" class="navi-item">Coleções</a></li>
-            <li><a href="#about" class="navi-item">Sobre</a></li>
-            <li><a href="#services" class="navi-item">Serviços</a></li>
-            <li><a href="#contact" class="navi-item">Contato</a></li>
+            <li class="navi-item active"><a href="#collections" class="navi-item montserrat-corpo">Coleções</a></li>
+            <li><a href="#about" class="navi-item montserrat-corpo">Sobre</a></li>
+            <li><a href="#services" class="navi-item montserrat-corpo">Serviços</a></li>
+            <li><a href="#contact" class="navi-item montserrat-corpo">Contato</a></li>
         </ul>
 
         <!-- Mobile -->
@@ -129,7 +129,7 @@
         <div id="about_card">
     
             <div class="">
-                <div class="product-card">
+                <div>
                     <img src="src/assets/chef.png" alt="Anel de Ouro">
                     <div class="overlay text-center">
                         <h3>Anel Clássico</h3>
@@ -143,46 +143,70 @@
     <section id="services">
 
         <div class="tittle">
-            <h2 class="section-subtitle text-2xl playfair-display-chique ">Destreza</h2>
-            <h3 class="section-title text-6xl montserrat-corpo">Serviços Oferecidos</h3>
+            <p class="services-eyebrow montserrat-corpo">O QUE FAZEMOS</p>
+
+            <h2 class="services-title playfair-display-chique">
+            <span class="title-white">Nossos</span>
+            <span class="title-gold">Serviços</span>
+            </h2>
         </div>
-        
+
         <div id="grid">
-    
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="product-card">
-                    <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Anel de Ouro">
-                    <div class="overlay">
-                        <h3>Anel Clássico</h3>
-                        <p>Ouro 18k</p>
-                    </div>
+            <div class="services-grid">
+
+            <article class="product-card">
+                <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Gravação a Laser">
+                <div class="overlay">
+                <h3 class="playfair-display-chique">Gravação a Laser</h3>
+                <p class="montserrat-corpo">Alta Precisão Raycus 50W</p>
                 </div>
-                <div class="product-card">
-                    <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Anel de Ouro">
-                    <div class="overlay">
-                        <h3>Anel Clássico</h3>
-                        <p>Ouro 18k</p>
-                    </div>
+            </article>
+
+            <article class="product-card">
+                <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Corte a Laser">
+                <div class="overlay">
+                <h3 class="playfair-display-chique">Corte a Laser</h3>
+                <p class="montserrat-corpo">Cortes milimétricos em metais preciosos</p>
                 </div>
-                <div class="product-card">
-                    <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Anel de Ouro">
-                    <div class="overlay">
-                        <h3>Anel Clássico</h3>
-                        <p>Ouro 18k</p>
-                    </div>
+            </article>
+
+            <article class="product-card">
+                <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Reparação">
+                <div class="overlay">
+                <h3 class="playfair-display-chique">Reparação</h3>
+                <p class="montserrat-corpo">Restauro com cuidado e acabamento fino</p>
                 </div>
-                <div class="product-card">
-                    <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Anel de Ouro">
-                    <div class="overlay">
-                        <h3>Anel Clássico</h3>
-                        <p>Ouro 18k</p>
-                    </div>
+            </article>
+
+            <article class="product-card">
+                <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Criação Personalizada">
+                <div class="overlay">
+                <h3 class="playfair-display-chique">Criação Personalizada</h3>
+                <p class="montserrat-corpo">Do esboço à joia final</p>
                 </div>
-                <!-- mais produtos... -->
+            </article>
+
+            <article class="product-card">
+                <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Cravação de Pedras">
+                <div class="overlay">
+                <h3 class="playfair-display-chique">Cravação de Pedras</h3>
+                <p class="montserrat-corpo">Diamantes, esmeraldas, rubis e mais</p>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="Polimento e Banho">
+                <div class="overlay">
+                <h3 class="playfair-display-chique">Polimento e Banho</h3>
+                <p class="montserrat-corpo">Renovação com ouro ou ródio</p>
+                </div>
+            </article>
+
             </div>
-        
         </div>
+
     </section>
+
 
     <section id="contact">
         <div class="contact-container">
@@ -249,9 +273,9 @@
                 </div>
 
                 <!-- Direitos -->
-                <p class="text-sm text-neutral-400">
-                    © 2024 Adão Ourives. Todos os direitos reservados.
-                </p>
+                <span class="text-sm text-neutral-400">
+                    &copy 2024 Adão Ourives. Todos os direitos reservados.
+                </span>
 
             </div>
         </div>
