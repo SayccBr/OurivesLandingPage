@@ -15,14 +15,12 @@
 
 /* Texto */
 .contact-info .section-subtitle {
-    font-size: 1.1rem;
     letter-spacing: 2px;
     color: #d4af37;
     text-transform: uppercase;
 }
 
 .contact-info .section-title {
-    font-size: 2.5rem;
     margin: 10px 0 30px;
 }
 
@@ -30,6 +28,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    font-size: 20px;
 }
 
 .contact-list li {
@@ -38,14 +37,12 @@
 
 .contact-list strong {
     display: block;
-    font-size: 0.9rem;
     letter-spacing: 1px;
     color: #d4af37;
     margin-bottom: 6px;
 }
 
 .contact-list span {
-    font-size: 1.05rem;
     line-height: 1.6;
     color: #e0e0e0;
 }
@@ -53,7 +50,7 @@
 /* Mapa - MENOR */
 .contact-location iframe {
     width: 100%;
-    height: 320px; /* Reduzido de 400px para 320px */
+    height: 450px; /* Reduzido de 400px para 320px */
     border-radius: 16px;
     border: none;
     filter: grayscale(60%) contrast(1.1);
