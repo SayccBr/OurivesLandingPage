@@ -24,7 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Jquery Scroll spy para adicionar classe active nos links de navegação
     $(window).on('scroll', function() {
+        const header = $('header');
         var scrollPos = $(window).scrollTop() + 100; // offset para considerar o header
+
+        if (scrollPos <= 0) {
+            header.css('box-shadow', 'none');
+        } else {
+            header.css('box-shadow', '5px 1px 5px rgba(0, 0, 0, 0.5)');
+        }
 
         // Remover active de todos
         $('#navi_links .navi-item, #mobile_links .mobile-item').removeClass('active');
