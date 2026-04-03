@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const header = $('header');
         var scrollPos = $(window).scrollTop() + 100; // offset para considerar o header
 
+        // Adicionar box-shadow no header ao mover
         if (scrollPos <= 0) {
             header.css('box-shadow', 'none');
         } else {
@@ -61,4 +62,53 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }); 
 
+    //scroll reveal para animação de fade-in
+    ScrollReveal().reveal('#cta', {
+        origin: 'left', 
+        duration: 2000,
+        distance: '20%'
+    });
+
+    ScrollReveal().reveal('.about-tittle', {
+        origin: 'left', 
+        duration: 2000,
+        distance: '20%'
+    });
+
+    ScrollReveal().reveal('#about_card', {
+        origin: 'bottom', 
+        duration: 2000,
+        distance: '20%'
+    });
+
+    ScrollReveal().reveal('.grid-top', {
+        origin: 'left', 
+        duration: 2000,
+        distance: '20%'
+    });
+
+    ScrollReveal().reveal('.grid-bottom', {
+        origin: 'right', 
+        duration: 2000,
+        distance: '20%'
+    });
+
+    ScrollReveal().reveal('.contact-info', {
+        origin: 'right', 
+        duration: 2000,
+        distance: '20%'
+    });
+
+    ScrollReveal().reveal('.contact-info', {
+        origin: 'left', 
+        duration: 2000,
+        distance: '20%'
+    });
+
+    ScrollReveal().reveal('.contact-location', {
+        origin: 'right', 
+        duration: 2000,
+        distance: '20%'
+    });
+    
 });
