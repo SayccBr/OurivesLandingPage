@@ -1,0 +1,29 @@
+/* Footer responsivo */
+@media screen and (max-width: 1024px) {
+    #footer_container > .flex {
+        flex-direction: column !important;
+        gap: 24px;
+        text-align: center;
+    }
+    
+    /* Mantém as redes sociais lado a lado */
+    #footer_sociais {
+        flex-direction: row !important;
+        justify-content: center;
+    }
+    
+    #footer_container a[href="#home"] p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        height: auto;
+        padding: 32px 16px;
+    }
+    
+    #footer_container > .flex {
+        gap: 20px;
+    }
+}

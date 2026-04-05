@@ -53,7 +53,7 @@
     height: 450px; /* Reduzido de 400px para 320px */
     border-radius: 16px;
     border: none;
-    filter: grayscale(60%) contrast(1.1);
+    filter: grayscale(40%) contrast(1.1);
 }
 
 /* Responsivo */
@@ -68,6 +68,6 @@
     }
 
     .contact-location iframe {
-        height: 280px;
+        height: 300px;
     }
 }

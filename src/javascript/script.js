@@ -1,15 +1,13 @@
-/* 
-  Mobile menu toggle com jQuery
-$(document).ready(function() {
-    $('#mobile_btn').on('click', function() {
-        $('#mobile_menu').toggleClass('active');
-        $('#mobile_btn').find('i').toggleClass('fa-xmark fa-bars');
-    });
-});
+/* Mobile menu toggle com jQuery 
+$(document).ready(function() { 
+    $('#mobile_btn').on('click', function() { 
+        $('#mobile_menu').toggleClass('active'); 
+        $('#mobile_btn').find('i').toggleClass('fa-xmark fa-bars'); 
+        }); 
+    }); 
 */
 
 /* JavaScript puro para toggle do menu mobile */
-
 document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("mobile_btn");
     const menu = document.getElementById("mobile_menu");
@@ -17,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btn.addEventListener("click", () => {
         menu.classList.toggle("active");
-        
         icon.classList.toggle("fa-bars");
         icon.classList.toggle("fa-xmark");
     });
@@ -25,19 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // Jquery Scroll spy para adicionar classe active nos links de navegação
     $(window).on('scroll', function() {
         const header = $('header');
-        var scrollPos = $(window).scrollTop() + 100; // offset para considerar o header
+        var scrollPos = $(window).scrollTop() + 100;
 
-        // Adicionar box-shadow no header ao mover
         if (scrollPos <= 0) {
             header.css('box-shadow', 'none');
         } else {
             header.css('box-shadow', '5px 1px 5px rgba(0, 0, 0, 0.5)');
         }
 
-        // Remover active de todos
         $('#navi_links .navi-item, #mobile_links .mobile-item').removeClass('active');
 
-        // Verificar cada link, ignorando #home
         $('#navi_links .navi-item a, #mobile_links .mobile-item a').each(function() {
             var currLink = $(this);
             var href = currLink.attr("href");
@@ -50,19 +44,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    
     // Smooth scroll para links de navegação
     $('a[href^="#"]').on('click', function(event) {
         var target = $($(this).attr('href'));
         if (target.length) {
             event.preventDefault();
             $('html, body').animate({
-                scrollTop: target.offset().top - 15 // ajuste para o header
+                scrollTop: target.offset().top - 15
             }, 1000);
         }
     }); 
 
-    //scroll reveal para animação de fade-in
+    // Scroll reveal para animação de fade-in
     ScrollReveal().reveal('#cta', {
         origin: 'left', 
         duration: 2000,
@@ -94,12 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     ScrollReveal().reveal('.contact-info', {
-        origin: 'right', 
-        duration: 2000,
-        distance: '20%'
-    });
-
-    ScrollReveal().reveal('.contact-info', {
         origin: 'left', 
         duration: 2000,
         distance: '20%'
@@ -110,5 +97,53 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 2000,
         distance: '20%'
     });
-    
-});
+
+// =====================
+    // COUNTER ANIMATION 
+    // =====================
+    function animateCounter(element, target, duration = 2000, suffix = '') {
+        let startTime = null;
+
+        const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+
+        function update(currentTime) {
+            if (!startTime) startTime = currentTime;
+
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            const easedProgress = easeOut(progress);
+
+            const value = Math.floor(easedProgress * target);
+            element.textContent = value + suffix;
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                element.textContent = target + suffix;
+            }
+        }
+
+        requestAnimationFrame(update);
+    }
+
+    // OBSERVER
+    const counters = document.querySelectorAll('.counter');
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const target = +el.getAttribute('data-target');
+                const suffix = el.getAttribute('data-suffix') || '';
+
+                animateCounter(el, target, 2000, suffix);
+
+                obs.unobserve(el);
+            }
+        });
+    }, {
+        threshold: 0.7
+    });
+
+    counters.forEach(counter => observer.observe(counter));
+
+}); 

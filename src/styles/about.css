@@ -19,18 +19,50 @@
     width: 50%; 
 }
 
+.about-tittle p{
+    color: #e0e0e0;
+}
+
+#about_card img {
+    width: 100%;
+    max-width: 480px; /* Impede que a foto estique e perca resolução */
+    aspect-ratio: 3 / 4; /* Proporção de retrato clássica de revista */
+    object-fit: cover; /* Recorta a imagem sem distorcer */
+    
+    border-radius: 4px;
+    /* Efeito de moldura: uma borda fina dourada e uma sombra sólida deslocada */
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    box-shadow: 15px 15px 0px 0px #e9a209;
+    
+    transition: all 0.5s ease;
+}
+
+#about_card img:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 25px 25px 0px 0px #e9a209;
+}
+
 /* Responsivo */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     #about {
         flex-direction: column; /* Empilha no mobile */
+        padding: 60px 40px; /* Adiciona espaço nas laterais */
     }
     
     #about_card {
         width: 100%;
+        justify-content: center;
     }
 
     .about-tittle {
         width: 100%;
         text-align: center;
+        word-wrap: break-word; /* Força quebra de palavras longas */
     }
+
+    /* CENTRALIZA OS NÚMEROS */
+    #about_numbers {
+        justify-content: center;
+    }
+
 }

@@ -12,3 +12,17 @@
     margin-bottom: 20px;
     color: #e9a209;
 }
+
+/* Ta todo cagado, precisa arrumar */
+@media (max-width: 1024px) {
+
+    .instagram-widget {
+       
+    }
+
+    #instagram_widget {
+        width: 150%;
+        margin-left: -25%;
+    }
+
+}

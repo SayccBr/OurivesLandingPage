@@ -6,12 +6,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/styles/styles.css">
-    <link rel="stylesheet" href="src/styles/header.css">
-    <link rel="stylesheet" href="src/styles/home.css">
-    <link rel="stylesheet" href="src/styles/collections.css">
-    <link rel="stylesheet" href="src/styles/about.css">
-    <link rel="stylesheet" href="src/styles/services.css">
-    <link rel="stylesheet" href="src/styles/contact.css">
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <title>Landing page</title>
@@ -22,7 +16,11 @@
 
     <header>
     <nav id="navi">
-        <i class="fa-solid fa-crown" id="navi_logo">adao ourives</i> 
+        <a href="#home" id="navi_logo">
+        ADÃO OURIVES
+        <span>JOALHERIA</span>
+        </a>
+
 
         <ul id="navi_links">
             <li class="navi-item"><a href="#collections" class="navi-item montserrat-corpo">Coleções</a></li>
@@ -51,26 +49,41 @@
     <main id="content">
 
     <section id="home" class="relative h-screen flex items-center">
-        <div id="cta" class="container mx-auto px-8 z-2">
-            <div class="mb-8" id="cta_text">
-                <h1 class="title text-9xl font-bold text-white mb-2 playfair-display-chique">ADÃO OURIVES</h1>
-                <p class="text-white/100 font-bold montserrat-corpo">Há mais de três décadas criando peças únicas que contam histórias. Cada joia é uma obra de arte, feita à mão com materiais preciosos selecionados criteriosamente.</p>
-            </div>
+        <div id="cta" class="container">
+            <div id="cta_text">
+                <h1 class="title text-9xl text-white mb-2 playfair-display-chique">Arte em <span class="teste playfair-display-chique">Ouro & Prata</span></h1>
+                
+                <!-- Texto completo (desktop) -->
+                <p class="text-white/100 montserrat-corpo hidden md:block">
+                    Há mais de três décadas criando joias únicas que eternizam histórias, unindo tradição, fabricação própria e acabamento premium para criar peças que duram para sempre.
+                </p>
 
-        <div id="cta_buttons" class="flex items-center">  
-            <div class="mb-4">
-                <a href="#collections" class="btn-default">Ver Coleções</a>
-            </div>
+                <!-- Texto resumido (mobile) -->
+                <p class="text-white/100 montserrat-corpo md:hidden text-base">
+                    Há mais de três décadas criando joias únicas com tradição e acabamento premium.
+                </p>
+            </div>                      
 
-            <div class="btn_whatsapp">
-                <button class="btn-default">
-                    <i class="fa-brands fa-whatsapp text-green-400 font-bold"></i>
-                    <span>+55 64 98409-4757</span>
-                </button>
-            </div>
-        </div> 
+            <div id="cta_buttons" class="flex items-center">  
+                <div class="mb-4">
+                    <a href="#collections" class="btn-outline">Ver Coleções</a>
+                </div>
+
+                <div class="btn_whatsapp">
+                    <button class="btn-default">
+                        <i class="fa-brands fa-whatsapp text-green-400 font-bold"></i>
+                        <span>Atendimento Exclusivo</span>
+                    </button>
+                </div>
+            </div> 
 
         </div>
+
+        <a href="#about" class="scroll-indicator">
+            <span class="arrow"></span>
+        </a>
+
+
     </section>
 
     <section id="collections">
@@ -79,18 +92,10 @@
         <h3 class="text-center section-title text-6xl montserrat-corpo">Nossas Coleções</h3>
     </div>
         
-    <div class="container mx-auto">
+    <div id="instagram_widget">
         
         <!-- LightWidget para Instagram -->
-        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-        <iframe 
-            src="//lightwidget.com/widgets/a41c212944df56fd880e132c4fd9c48b.html" 
-            scrolling="no" 
-            allowtransparency="true" 
-            class="lightwidget-widget" 
-            style="width:100%;border:0;overflow:hidden;">
-        </iframe>
-    
+       <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/633c7b873ee25990b1990642bcf1b960.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
     </div>
     </section>
 
@@ -98,49 +103,49 @@
 
         <div class="about-tittle">
             <div> 
-                <h2 class="section-subtitle text-2xl playfair-display-chique ">Quem somos?</h2>
-                <h3 class="section-title text-6xl montserrat-corpo">Há mais de 3 décadas</h3>
+                <h2 class="section-subtitle text-2xl playfair-display-chique">A Essência do Ofício</h2>
+                <h3 class="section-title text-6xl montserrat-corpo">Tradição que <span class="teste playfair-display-chique">Transforma</span></h3>
             </div>
 
-            <p class="montserrat-corpo text-lg">A Adão Ourives é uma joalheria familiar que há mais de 30 anos se dedica a criar peças únicas e exclusivas. Fundada por Adão Cassiano, a empresa começou como um pequeno ateliê e cresceu graças à paixão pela arte da ourivesaria e ao compromisso com a qualidade .</p>
-            <p class="montserrat-corpo text-lg">Hoje, a Adão Ourives é reconhecida por sua habilidade artesanal e pelo design inovador, oferecendo uma ampla gama de joias que combinam tradição e modernidade. Cada peça é cuidadosamente elaborada para refletir a personalidade e o estilo de seus clientes.</p>
+            <p class="montserrat-corpo text-lg">
+                A Adão Ourives é uma joalheria tradicional localizada no coração de <strong>Iporá – GO</strong>, com mais de três décadas de experiência na criação e reparo de joias em ouro e prata.
+            </p>
+
+            <p class="montserrat-corpo text-lg">
+                Hoje, a Adão Ourives é reconhecida por sua habilidade artesanal e pelo design excepcional, oferecendo uma ampla gama de joias que combinam tradição e modernidade. Especialistas em ouro 18k, com modelos personalizados, fabricação própria e décadas de experiência em transformar histórias em joias.
+            </p>
             
-            <div class="flex gap-12">
+            <div class="flex gap-12" id="about_numbers">
 
                 <div>
-                    <span class="block text-5xl font-extrabold text-[#e9a209] playfair-display-chique">
-                        1500+
+                    <span class="counter block text-5xl font-extrabold text-[#e9a209] playfair-display-chique"
+                        data-target="1500" data-suffix="+">
+                        0
                     </span>
-                    <span class="block text-lg playfair-display-chique">
+                    <span class="block text-lg text-[#e0e0e0] playfair-display-chique">
                         Peças criadas
                     </span>
                 </div>
 
                 <div>
-                    <span class="block text-5xl font-extrabold text-[#e9a209] playfair-display-chique">
-                        100%
+                    <span class="counter block text-5xl font-extrabold text-[#e9a209] playfair-display-chique"
+                        data-target="100" data-suffix="%">
+                        0
                     </span>
-                    <span class="block text-lg playfair-display-chique">
+                    <span class="block text-lg text-[#e0e0e0] playfair-display-chique">
                         Satisfação
                     </span>
                 </div>
-            </div>
 
+            </div>
         </div>
         
         <div id="about_card">
-    
-            <div class="">
-                <div>
-                    <img src="src/assets/chef.png" alt="Anel de Ouro">
-                    <div class="overlay text-center">
-                        <h3>Anel Clássico</h3>
-                        <p>Ouro 18k</p>
-                    </div>
-                </div>
-            </div>
+            <img src="src/assets/lojafoto1.jpeg" alt="Foto Loja">
         </div>
+
     </section>
+
 
     <section id="services">
 
@@ -165,20 +170,21 @@
                 </article>
 
                 <article class="product-card">
-                    <img src="src/assets/laser.png" alt="Gravação a Laser">
+                    <img src="src/assets/aliança.jpg" alt="Alianças">
                     <div class="overlay">
-                        <h3 class="playfair-display-chique">Corte/Gravação a Laser</h3>
-                        <p class="montserrat-corpo">Alta Precisão em metais preciosos</p>
+                        <h3 class="playfair-display-chique">Alianças</h3>
+                        <p class="montserrat-corpo">Design autoral com as mais nobres gemas</p>
                     </div>
                 </article>
 
                 <article class="product-card">
-                    <img src="src/assets/Gemini_Generated_Image_fz7i8ofz7i8ofz7i.png" alt="outros">
+                    <img src="src/assets/correntes.png" alt="Polimento e Banho">
                     <div class="overlay">
-                        <h3 class="playfair-display-chique">Entre outros</h3>
-                        <p class="montserrat-corpo">Serviços de ourivesaria</p>
+                        <h3 class="playfair-display-chique">Polimento e Banho</h3>
+                        <p class="montserrat-corpo">Acabamento refinado para devolver a vida à sua joia</p>
                     </div>
                 </article>
+
             </div>
 
             <div class="services-grid grid-bottom">
@@ -191,18 +197,18 @@
                 </article>
 
                 <article class="product-card">
-                    <img src="src/assets/pedras.png" alt="Cravação de Pedras">
+                    <img src="src/assets/laser2.jpeg" alt="Gravação a Laser">
                     <div class="overlay">
-                        <h3 class="playfair-display-chique">Cravação de Pedras</h3>
-                        <p class="montserrat-corpo">Diamantes, esmeraldas, rubis e mais</p>
+                        <h3 class="playfair-display-chique">Corte/Gravação a Laser</h3>
+                        <p class="montserrat-corpo">Alta Precisão em metais preciosos</p>
                     </div>
                 </article>
 
                 <article class="product-card">
-                    <img src="src/assets/correntes.png" alt="Polimento e Banho">
+                    <img src="src/assets/formatura1.png" alt="Anéis de Formatura">
                     <div class="overlay">
-                        <h3 class="playfair-display-chique">Polimento e Banho</h3>
-                        <p class="montserrat-corpo">Renovação com ouro ou ródio</p>
+                        <h3 class="playfair-display-chique">Anéis de Formatura</h3>
+                        <p class="montserrat-corpo">Design simbólico e exclusivo para celebrar sua jornada acadêmica</p>
                     </div>
                 </article>
             </div>
@@ -243,7 +249,7 @@
             <div class="contact-location">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1913.3230597817844!2d-51.12085205345169!3d-16.442797534514387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9366bdc512b308df%3A0x4171a1b20ea8a2d4!2sAd%C3%A3o%20Ourives!5e0!3m2!1spt-BR!2sbr!4v1770040149095!5m2!1spt-BR!2sbr"
-                    loading="lazy"
+                    loading="eager"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
@@ -254,7 +260,7 @@
     </main>
 
     <footer class="h-35 mx-auto bg-neutral-900 text-neutral-300 flex items-center">
-        <div class="w-full mx-auto">
+        <div class="w-full mx-auto" id="footer_container">
             <div class="flex items-center justify-between">
 
                 <!-- Marca -->
@@ -265,12 +271,15 @@
                 </a>
 
                 <!-- Redes sociais -->
-                <div class="flex gap-8 text-2xl">
+                <div class="flex gap-8 text-2xl" id="footer_sociais">
                     <a href="#" class="hover:text-yellow-500 transition">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
                     <a href="#" class="hover:text-yellow-500 transition">
                         <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="hover:text-yellow-500 transition">
+                        <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
 
