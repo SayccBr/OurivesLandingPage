@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <link rel="stylesheet" href="src/styles/styles.css">
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <title>Landing page</title>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    
     <title>Adão Ourives - Joias Exclusivas</title>
 </head>
 <body>
@@ -70,10 +73,14 @@
                 </div>
 
                 <div class="btn_whatsapp">
-                    <button class="btn-default">
+                    <a 
+                        href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F5564999897947%3Ftext%3DOl%25C3%25A1%2521%2BVim%2Bpelo%2Bsite%2Bda%2BAd%25C3%25A3o%2BOurives%2Be%2Bgostaria%2Bde%2Bum%2Bor%25C3%25A7amento%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn-PdsMFSxnIS2SGNQwrIaiSVKwpVNhTSsbwjvOYntvyqOYIBb9EVvxatehj4_aem_3tWEKSTGl2pjS0sOqyiJtg&e=AT4gntdJHvDshCf1ANjQV8lpsDr-mScxW15UeLTHbMuN44xPf2q71VUkGZypvxgEPwaOWMoDXkVcrSZLuj_I7Z4qfLp5noTy7Y43E_K6g4oUUs6VCsf60peG8g" 
+                        target="_blank"
+                        class="btn-default flex items-center gap-2"
+                    >
                         <i class="fa-brands fa-whatsapp text-green-400 font-bold"></i>
                         <span>Atendimento Exclusivo</span>
-                    </button>
+                    </a>
                 </div>
             </div> 
 
@@ -91,20 +98,35 @@
         <h2 class="text-center section-subtitle text-2xl playfair-display-chique ">Exclusividade</h2>
         <h3 class="text-center section-title text-6xl montserrat-corpo">Nossas Coleções</h3>
     </div>
-        
-    <div id="instagram_widget">
-        
-        <!-- LightWidget para Instagram -->
-       <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/633c7b873ee25990b1990642bcf1b960.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+
+    <!-- Slider de Coleções (Pego do codepen) -->
+    <div class="slider">
+	  	<img src="src/assets/1.jpeg" />
+	  	<img src="src/assets/Captura de tela 2026-02-05 202338.png" />
+	  	<img src="src/assets/3.jpeg" />
+	  	<img src="src/assets/4.jpeg" />
+	  	<img src="src/assets/5.jpeg" />
+	  	<img src="src/assets/6.jpeg" />
+        <img src="src/assets/aliança.jpg" />
+        <img src="src/assets/correntes.png" />
+        <img src="src/assets/formatura.jpeg" />
+	</div>
+
+    <div class="text-center ">
+        <a href="https://instagram.com/adaoourives" target="_blank" class="btn-default">
+            <i class="fa-brands fa-instagram"></i>
+            Ver mais no Instagram
+        </a>
     </div>
-    </section>
+
+</section>
 
     <section id="about">
 
         <div class="about-tittle">
             <div> 
                 <h2 class="section-subtitle text-2xl playfair-display-chique">A Essência do Ofício</h2>
-                <h3 class="section-title text-6xl montserrat-corpo">Tradição que <span class="teste playfair-display-chique">Transforma</span></h3>
+                <h3 class="section-title text-6xl montserrat-corpo">Tradição que <span class="teste montserrat-corpo">Transforma</span></h3>
             </div>
 
             <p class="montserrat-corpo text-lg">
@@ -275,7 +297,7 @@
                     <a href="#" class="hover:text-yellow-500 transition">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="hover:text-yellow-500 transition">
+                    <a href="https://instagram.com/adaoourives" target="_blank" class="hover:text-yellow-500 transition">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                     <a href="#" class="hover:text-yellow-500 transition">
@@ -295,6 +317,11 @@
 
 
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <script src="src/javascript/script.js"></script>
+
 </body>
 </html>
