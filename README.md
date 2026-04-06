@@ -9,6 +9,10 @@ Uma Landing Page sofisticada desenvolvida para a **Adão Ourives**, joalheria co
 
 ---
 
+## 🌐 Visualize o projeto:
+
+[Clique aqui para ver o site online](https://sayccbr.github.io/OurivesLandingPage/)
+
 ## Tecnologias Utilizadas
 
 O projeto utiliza tecnologias de ponta para garantir performance e facilidade de manutenção:
@@ -19,7 +23,6 @@ O projeto utiliza tecnologias de ponta para garantir performance e facilidade de
 * **[ScrollReveal](https://scrollrevealjs.org/):** Animações suaves de entrada durante a navegação.
 * **[FontAwesome 6](https://fontawesome.com/):** Biblioteca de ícones profissionais.
 
----
 
 ## Funcionalidades
 
@@ -30,19 +33,25 @@ O projeto utiliza tecnologias de ponta para garantir performance e facilidade de
 - [x] **Carrossel de Coleções:** Slider interativo para exibir as peças mais exclusivas.
 - [x] **Contato & Localização:** Integração com Google Maps e botão direto para WhatsApp.
 
----
-.
+```text
+
 ├── src/
 │   ├── assets/       # Imagens das joias, logos e ícones otimizados
-│   ├── styles/       # Arquivos CSS personalizados e resets
+│   ├── styles/       # Arquivos CSS personalizados
 │   └── javascript/   # Lógica do carrossel (Slick), ScrollReveal e scripts globais
-├── index.html        # Página principal (Entry point)
+├── index.html        # Página principal
 └── README.md         # Documentação detalhada do projeto
+```
 
----
 
-## 🛠️ Como Executar o Projeto
+## Como Executar o Projeto
 
 Como o projeto utiliza **CDNs** para as bibliotecas externas, não é necessário instalar dependências via `npm` ou `yarn`.
 
 1. Clone o repositório
+git clone https://github.com/SayccBr/OurivesLandingPage.git
+
+2. Entre na pasta
+cd OurivesLandingPage
+
+3. Abra o index.html no navegador
