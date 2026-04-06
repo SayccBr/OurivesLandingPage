@@ -17,11 +17,16 @@ Uma Landing Page sofisticada desenvolvida para a **Adão Ourives**, joalheria co
 
 O projeto utiliza tecnologias de ponta para garantir performance e facilidade de manutenção:
 
-* **[Tailwind CSS v4](https://tailwindcss.com/):** Estilização moderna e rápida via utilitários.
+## Tecnologias Utilizadas
+
+* **[HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML):** Estrutura e marcação semântica da página.
+* **[CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS):** Estilização avançada e layouts responsivos.
+* **[Tailwind CSS v4](https://tailwindcss.com/):** Estilização moderna e ultra-rápida via utilitários.
 * **[Slick Slider](https://kenwheeler.github.io/slick/):** Carrossel responsivo e otimizado para o portfólio de joias.
-* **[jQuery](https://jquery.com/):** Manipulação do DOM e suporte para bibliotecas de terceiros.
+* **[jQuery](https://jquery.com/):** Manipulação eficiente do DOM e suporte para plugins.
 * **[ScrollReveal](https://scrollrevealjs.org/):** Animações suaves de entrada durante a navegação.
-* **[FontAwesome 6](https://fontawesome.com/):** Biblioteca de ícones profissionais.
+* **[FontAwesome 6](https://fontawesome.com/):** Biblioteca de ícones profissionais para interface.
+* **[Google Fonts](https://fonts.google.com/):** Fontes.
 
 
 ## Funcionalidades
