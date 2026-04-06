@@ -9,7 +9,7 @@ Uma Landing Page sofisticada desenvolvida para a **Adão Ourives**, joalheria co
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 O projeto utiliza tecnologias de ponta para garantir performance e facilidade de manutenção:
 
@@ -21,7 +21,7 @@ O projeto utiliza tecnologias de ponta para garantir performance e facilidade de
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - [x] **Design Responsivo:** Adaptado perfeitamente para Celulares, Tablets e Desktops.
 - [x] **Hero Section:** Destaque para a arte em Ouro & Prata com CTA para atendimento.
@@ -31,13 +31,13 @@ O projeto utiliza tecnologias de ponta para garantir performance e facilidade de
 - [x] **Contato & Localização:** Integração com Google Maps e botão direto para WhatsApp.
 
 ---
-
+.
 ├── src/
-│   ├── assets/       # Imagens das joias e logos
-│   ├── styles/       # Arquivos CSS personalizados
-│   └── javascript/   # Lógica do carrossel e animações
-├── index.html        # Página principal
-└── README.md         # Documentação do projeto
+│   ├── assets/       # Imagens das joias, logos e ícones otimizados
+│   ├── styles/       # Arquivos CSS personalizados e resets
+│   └── javascript/   # Lógica do carrossel (Slick), ScrollReveal e scripts globais
+├── index.html        # Página principal (Entry point)
+└── README.md         # Documentação detalhada do projeto
 
 ---
 
@@ -45,6 +45,4 @@ O projeto utiliza tecnologias de ponta para garantir performance e facilidade de
 
 Como o projeto utiliza **CDNs** para as bibliotecas externas, não é necessário instalar dependências via `npm` ou `yarn`.
 
-1. Clone o repositório:
-   ```bash
-   git clone [https://github.com/seu-usuario/adao-ourives.git](https://github.com/seu-usuario/adao-ourives.git)
+1. Clone o repositório
