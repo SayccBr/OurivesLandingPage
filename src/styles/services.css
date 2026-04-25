@@ -122,12 +122,16 @@
 
 /* Responsivo: 3->2->1 */
 @media (max-width: 1024px){
-  .services-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .services-grid{ display: contents; }
   .product-card{ height: 340px; }
 }
 
 @media (max-width: 640px){
   #services{ padding: 70px 0 60px; }
-  .services-grid{ grid-template-columns: 1fr; }
+  #grid{ grid-template-columns: 1fr; }
   .product-card{ height: 280px; }
 }
