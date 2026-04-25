@@ -52,6 +52,7 @@
     #about_card {
         width: 100%;
         justify-content: center;
+        display: flex;
     }
 
     .about-tittle {
@@ -63,6 +64,23 @@
     /* CENTRALIZA OS NÚMEROS */
     #about_numbers {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
+}
+
+@media screen and (max-width: 480px) {
+    #about {
+        padding: 60px 24px;
+    }
+
+    #about_card img {
+        max-width: calc(100% - 16px);
+        box-shadow: 10px 10px 0px 0px #e9a209;
+    }
+
+    #about_card img:hover {
+        transform: none;
+        box-shadow: 10px 10px 0px 0px #e9a209;
+    }
 }

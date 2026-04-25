@@ -88,7 +88,8 @@
 
 @media screen and (max-width: 1024px) {
     #home {
-        min-height: 100%;
+        min-height: calc(100svh - 82px);
+        height: calc(100svh - 82px);
         background-attachment: scroll; /* importante no mobile */    
         padding: 60px 40px; /* Adiciona espaço nas laterais */
     }
@@ -97,6 +98,7 @@
         width: 100%;
         text-align: center;
         align-items: center;
+        margin-top: 0;
     }
 
     /* Sobrescreve text-8x1 */
@@ -112,8 +114,39 @@
 
     /* Joga a seta um pouco pra baixo*/
     .scroll-indicator {
-    bottom: 30px;
+        bottom: 30px;
+    }
 }
 
-  
+@media screen and (max-width: 480px) {
+    #home {
+        padding: 36px 20px 52px;
+    }
+
+    #cta {
+        gap: 20px;
+    }
+
+    #cta_text {
+        gap: 18px;
+    }
+
+    #cta_buttons {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    #cta_buttons .btn-default,
+    #cta_buttons .btn-outline {
+        flex: 0 1 auto;
+        min-width: 0;
+        padding: 9px 10px;
+        font-size: 0.82rem;
+    }
+
+    #cta_buttons .btn-default span {
+        white-space: nowrap;
+    }
 }
