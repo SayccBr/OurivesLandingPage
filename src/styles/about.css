@@ -23,6 +23,15 @@
     color: #e0e0e0;
 }
 
+.about-tittle .section-title {
+    text-wrap: balance;
+}
+
+.about-tittle .section-title .teste {
+    display: inline-block;
+    white-space: nowrap;
+}
+
 #about_card img {
     width: 100%;
     max-width: 480px; /* Impede que a foto estique e perca resolução */
@@ -52,6 +61,7 @@
     #about_card {
         width: 100%;
         justify-content: center;
+        display: flex;
     }
 
     .about-tittle {
@@ -63,6 +73,28 @@
     /* CENTRALIZA OS NÚMEROS */
     #about_numbers {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
+}
+
+@media screen and (max-width: 480px) {
+    #about {
+        padding: 60px 24px;
+    }
+
+    .about-tittle .section-title {
+        font-size: clamp(3rem, 13vw, 3.75rem) !important;
+        line-height: 1.08;
+    }
+
+    #about_card img {
+        max-width: calc(100% - 16px);
+        box-shadow: 10px 10px 0px 0px #e9a209;
+    }
+
+    #about_card img:hover {
+        transform: none;
+        box-shadow: 10px 10px 0px 0px #e9a209;
+    }
 }

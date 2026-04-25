@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Joalheria em Iporá-GO especializada em joias em ouro 18k, prata, alianças, reparos, polimento, gravação a laser e peças personalizadas.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Adão Ourives">
+    <meta property="og:title" content="Adão Ourives | Joias em Ouro e Prata em Iporá-GO">
+    <meta property="og:description" content="Joias exclusivas, alianças, reparos e peças personalizadas com fabricação própria em Iporá-GO.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="src/assets/lojafoto1.jpeg">
+    <meta name="theme-color" content="#141414">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
@@ -13,7 +22,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
-    <title>Adão Ourives - Joias Exclusivas</title>
+    <title>Adão Ourives | Joias em Ouro e Prata em Iporá-GO</title>
 </head>
 <body>
 
@@ -33,8 +42,8 @@
         </ul>
 
         <!-- Mobile -->
-        <button id="mobile_btn">
-            <i class="fa-solid fa-bars"></i>
+        <button id="mobile_btn" type="button" aria-label="Abrir menu" aria-controls="mobile_menu" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
     </nav>
 
@@ -42,9 +51,10 @@
     <div id="mobile_menu" class="">
         <ul id="mobile_links">
             <li class="mobile-item active"><a href="#home" class="mobile-item">Home</a></li>
-            <li><a href="#about" class="navi-item">Sobre</a></li>
-            <li><a href="#services" class="navi-item">Serviços</a></li>
-            <li><a href="#contact" class="navi-item">Contato</a></li>
+            <li class="mobile-item"><a href="#collections" class="navi-item">Coleções</a></li>
+            <li class="mobile-item"><a href="#about" class="navi-item">Sobre</a></li>
+            <li class="mobile-item"><a href="#services" class="navi-item">Serviços</a></li>
+            <li class="mobile-item"><a href="#contact" class="navi-item">Contato</a></li>
         </ul>
     </div>
     </header>
@@ -74,11 +84,12 @@
 
                 <div class="btn_whatsapp">
                     <a 
-                        href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F5564999897947%3Ftext%3DOl%25C3%25A1%2521%2BVim%2Bpelo%2Bsite%2Bda%2BAd%25C3%25A3o%2BOurives%2Be%2Bgostaria%2Bde%2Bum%2Bor%25C3%25A7amento%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn-PdsMFSxnIS2SGNQwrIaiSVKwpVNhTSsbwjvOYntvyqOYIBb9EVvxatehj4_aem_3tWEKSTGl2pjS0sOqyiJtg&e=AT4gntdJHvDshCf1ANjQV8lpsDr-mScxW15UeLTHbMuN44xPf2q71VUkGZypvxgEPwaOWMoDXkVcrSZLuj_I7Z4qfLp5noTy7Y43E_K6g4oUUs6VCsf60peG8g" 
+                        href="https://wa.me/5564999897947?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ad%C3%A3o%20Ourives%20e%20gostaria%20de%20um%20or%C3%A7amento."
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="btn-default flex items-center gap-2"
                     >
-                        <i class="fa-brands fa-whatsapp text-green-400 font-bold"></i>
+                        <i class="fa-brands fa-whatsapp text-green-400 font-bold" aria-hidden="true"></i>
                         <span>Atendimento Exclusivo</span>
                     </a>
                 </div>
@@ -86,9 +97,9 @@
 
         </div>
 
-        <a href="#about" class="scroll-indicator">
+        <div class="scroll-indicator" aria-hidden="true">
             <span class="arrow"></span>
-        </a>
+        </div>
 
 
     </section>
@@ -101,20 +112,20 @@
 
     <!-- Slider de Coleções (Pego do codepen) -->
     <div class="slider">
-	  	<img src="src/assets/1.jpeg" />
-	  	<img src="src/assets/Captura de tela 2026-02-05 202338.png" />
-	  	<img src="src/assets/3.jpeg" />
-	  	<img src="src/assets/4.jpeg" />
-	  	<img src="src/assets/5.jpeg" />
-	  	<img src="src/assets/6.jpeg" />
-        <img src="src/assets/aliança.jpg" />
-        <img src="src/assets/correntes.png" />
-        <img src="src/assets/formatura.jpeg" />
+        <img src="src/assets/1.jpeg" alt="Joia exclusiva em ouro" loading="lazy" />
+        <img src="src/assets/Captura de tela 2026-02-05 202338.png" alt="Detalhe de joia artesanal" loading="lazy" />
+        <img src="src/assets/3.jpeg" alt="Peça de joalheria personalizada" loading="lazy" />
+        <img src="src/assets/4.jpeg" alt="Joia em exposição" loading="lazy" />
+        <img src="src/assets/5.jpeg" alt="Modelo de joia exclusiva" loading="lazy" />
+        <img src="src/assets/6.jpeg" alt="Joia com acabamento refinado" loading="lazy" />
+        <img src="src/assets/aliança.jpg" alt="Alianças em ouro" loading="lazy" />
+        <img src="src/assets/correntes.png" alt="Correntes em ouro e prata" loading="lazy" />
+        <img src="src/assets/formatura.jpeg" alt="Anel de formatura personalizado" loading="lazy" />
 	</div>
 
     <div class="text-center ">
-        <a href="https://instagram.com/adaoourives" target="_blank" class="btn-default">
-            <i class="fa-brands fa-instagram"></i>
+        <a href="https://instagram.com/adaoourives" target="_blank" rel="noopener noreferrer" class="btn-default">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
             Ver mais no Instagram
         </a>
     </div>
@@ -163,7 +174,7 @@
         </div>
         
         <div id="about_card">
-            <img src="src/assets/lojafoto1.jpeg" alt="Foto Loja">
+            <img src="src/assets/lojafoto1.jpeg" alt="Fachada da loja Adão Ourives" loading="lazy">
         </div>
 
     </section>
@@ -184,7 +195,7 @@
 
             <div class="services-grid grid-top">
                 <article class="product-card">
-                    <img src="src/assets/Captura de tela 2026-02-05 202124.png" alt="Criação Personalizada">
+                    <img src="src/assets/Captura de tela 2026-02-05 202124.png" alt="Criação personalizada de joias" loading="lazy">
                     <div class="overlay">
                         <h3 class="playfair-display-chique">Criação Personalizada</h3>
                         <p class="montserrat-corpo">Do esboço à joia final</p>
@@ -192,7 +203,7 @@
                 </article>
 
                 <article class="product-card">
-                    <img src="src/assets/aliança.jpg" alt="Alianças">
+                    <img src="src/assets/aliança.jpg" alt="Alianças em ouro" loading="lazy">
                     <div class="overlay">
                         <h3 class="playfair-display-chique">Alianças</h3>
                         <p class="montserrat-corpo">Design autoral com as mais nobres gemas</p>
@@ -200,7 +211,7 @@
                 </article>
 
                 <article class="product-card">
-                    <img src="src/assets/correntes.png" alt="Polimento e Banho">
+                    <img src="src/assets/correntes.png" alt="Correntes após polimento e banho" loading="lazy">
                     <div class="overlay">
                         <h3 class="playfair-display-chique">Polimento e Banho</h3>
                         <p class="montserrat-corpo">Acabamento refinado para devolver a vida à sua joia</p>
@@ -211,7 +222,7 @@
 
             <div class="services-grid grid-bottom">
                 <article class="product-card">
-                    <img src="src/assets/reparação.png" alt="Reparação">
+                    <img src="src/assets/reparação.png" alt="Reparação de joias" loading="lazy">
                     <div class="overlay">
                         <h3 class="playfair-display-chique">Reparação</h3>
                         <p class="montserrat-corpo">Restauro com cuidado e acabamento fino</p>
@@ -219,7 +230,7 @@
                 </article>
 
                 <article class="product-card">
-                    <img src="src/assets/laser2.jpeg" alt="Gravação a Laser">
+                    <img src="src/assets/laser2.jpeg" alt="Gravação a laser em joias" loading="lazy">
                     <div class="overlay">
                         <h3 class="playfair-display-chique">Corte/Gravação a Laser</h3>
                         <p class="montserrat-corpo">Alta Precisão em metais preciosos</p>
@@ -227,7 +238,7 @@
                 </article>
 
                 <article class="product-card">
-                    <img src="src/assets/formatura1.png" alt="Anéis de Formatura">
+                    <img src="src/assets/formatura1.png" alt="Anéis de formatura personalizados" loading="lazy">
                     <div class="overlay">
                         <h3 class="playfair-display-chique">Anéis de Formatura</h3>
                         <p class="montserrat-corpo">Design simbólico e exclusivo para celebrar sua jornada acadêmica</p>
@@ -271,7 +282,8 @@
             <div class="contact-location">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1913.3230597817844!2d-51.12085205345169!3d-16.442797534514387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9366bdc512b308df%3A0x4171a1b20ea8a2d4!2sAd%C3%A3o%20Ourives!5e0!3m2!1spt-BR!2sbr!4v1770040149095!5m2!1spt-BR!2sbr"
-                    loading="eager"
+                    title="Mapa da loja Adão Ourives em Iporá-GO"
+                    loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
@@ -294,14 +306,11 @@
 
                 <!-- Redes sociais -->
                 <div class="flex gap-8 text-2xl" id="footer_sociais">
-                    <a href="#" class="hover:text-yellow-500 transition">
-                        <i class="fa-brands fa-facebook-f"></i>
+                    <a href="https://instagram.com/adaoourives" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-500 transition" aria-label="Instagram da Adão Ourives">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                     </a>
-                    <a href="https://instagram.com/adaoourives" target="_blank" class="hover:text-yellow-500 transition">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="#" class="hover:text-yellow-500 transition">
-                        <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://wa.me/5564999897947?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ad%C3%A3o%20Ourives%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="hover:text-yellow-500 transition" aria-label="WhatsApp da Adão Ourives">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                     </a>
                 </div>
 
