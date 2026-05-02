@@ -70,3 +70,27 @@
         display: none !important; /* Touch é melhor no celular */
     }
 }
+
+@media (max-width: 1024px) and (max-height: 520px) and (orientation: landscape) {
+    #collections {
+        padding: 42px 0;
+    }
+
+    .section-subtitle {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        margin-bottom: 16px;
+        font-size: clamp(2rem, 8vh, 3rem) !important;
+    }
+
+    .slider {
+        width: min(960px, 92%);
+    }
+
+    .slider img {
+        height: 220px;
+    }
+}

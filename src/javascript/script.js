@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.setAttribute("aria-label", "Abrir menu");
     }
 
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (event) => {
+        event.stopPropagation();
         const isOpen = menu.classList.toggle("active");
 
         document.body.classList.toggle("menu-open", isOpen);
@@ -30,6 +31,23 @@ document.addEventListener("DOMContentLoaded", () => {
         icon.classList.toggle("fa-xmark", isOpen);
         btn.setAttribute("aria-expanded", String(isOpen));
         btn.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+    });
+
+    menu.addEventListener("click", (event) => {
+        event.stopPropagation();
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!menu.classList.contains("active")) return;
+        if (menu.contains(event.target) || btn.contains(event.target)) return;
+
+        closeMobileMenu();
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && menu.classList.contains("active")) {
+            closeMobileMenu();
+        }
     });
 
     // Jquery Scroll spy para adicionar classe active nos links de navegação

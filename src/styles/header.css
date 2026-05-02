@@ -1,17 +1,25 @@
 header {
-    width: 100%;
+    width: 100vw;
+    height: calc(var(--header-height) + var(--safe-top));
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 20px 0;
+    margin: 0;
+    padding: var(--safe-top) max(20px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left));
     background-color: var(--color-neutral-900); /* oklch(20.5% 0 0) */
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 3;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
 }
 
 
 #navi {
     width: 100%;
+    height: var(--header-height);
     max-width: 1118px;
     display: flex;
     align-items: center;
@@ -86,13 +94,18 @@ header {
     color: #e9a209;
     font-size: 1.5rem;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1002;
     padding: 8px;
     transition: transform 0.3s ease;
 }
 
 #mobile_btn:active {
     transform: scale(0.95);
+}
+
+#mobile_btn i {
+    position: relative;
+    z-index: 1;
 }
 
 /* Menu Mobile - NOVO DESIGN PROFISSIONAL */
@@ -108,7 +121,7 @@ header {
     padding: 80px 30px 24px;
     transform: translateX(100%);
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    z-index: 998;
+    z-index: 1001;
 }
 
 #mobile_menu.active {
@@ -185,21 +198,14 @@ header {
 }
 
 /* Media query mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     body.menu-open {
         overflow: hidden;
     }
 
-    body {
-        padding-top: 82px;
-    }
-
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        box-shadow: 5px 1px 5px rgba(0, 0, 0, 0.5);
+    #navi {
+        justify-content: center;
+        position: relative;
     }
 
     #navi_links {
@@ -208,11 +214,13 @@ header {
     
     #mobile_btn {
         display: block;
+        position: absolute;
+        right: 0;
     }
 }
 
 /* Media query pra interface moba*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     #navi_links {
         display: none;
     }
@@ -222,6 +230,27 @@ header {
         background-color: transparent;
         font-size: 1.5rem;
         cursor: pointer;
+        position: absolute;
+        right: 0;
     }
 
+}
+
+@media screen and (max-width: 1024px) and (max-height: 520px) {
+    header {
+        height: calc(64px + var(--safe-top));
+        padding: var(--safe-top) max(20px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left));
+    }
+
+    #navi {
+        height: 64px;
+    }
+
+    #navi_logo {
+        font-size: 1.25rem;
+    }
+
+    #navi_logo span {
+        font-size: 10px;
+    }
 }

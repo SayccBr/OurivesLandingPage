@@ -71,3 +71,31 @@
         height: 300px;
     }
 }
+
+@media (max-width: 1024px) and (max-height: 520px) and (orientation: landscape) {
+    #contact {
+        padding: 42px 40px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .contact-info .section-title {
+        font-size: clamp(2rem, 8vh, 3rem) !important;
+        margin-bottom: 18px;
+    }
+
+    .contact-list {
+        font-size: 0.95rem;
+    }
+
+    .contact-list li {
+        margin-bottom: 12px;
+    }
+
+    .contact-location iframe {
+        height: 260px;
+    }
+}

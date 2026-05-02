@@ -98,3 +98,30 @@
         box-shadow: 10px 10px 0px 0px #e9a209;
     }
 }
+
+@media screen and (max-width: 1024px) and (max-height: 520px) and (orientation: landscape) {
+    #about {
+        min-height: auto;
+        padding: 42px 40px;
+        gap: 24px;
+    }
+
+    .about-tittle {
+        gap: 16px;
+    }
+
+    .about-tittle .section-title {
+        font-size: clamp(2rem, 8vh, 3rem) !important;
+        line-height: 1;
+    }
+
+    .about-tittle p {
+        font-size: 0.95rem !important;
+        line-height: 1.45;
+    }
+
+    #about_card img {
+        max-width: min(260px, 70vw);
+        box-shadow: 8px 8px 0px 0px #e9a209;
+    }
+}

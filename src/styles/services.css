@@ -135,3 +135,14 @@
   #grid{ grid-template-columns: 1fr; }
   .product-card{ height: 280px; }
 }
+
+@media (max-width: 1024px) and (max-height: 520px) and (orientation: landscape){
+  #services{ padding: 42px 0; }
+  #services .tittle{ margin-bottom: 22px; }
+  #services #grid{ width: min(960px, 92%); gap: 18px; }
+  .services-grid{ gap: 18px; }
+  .services-eyebrow{ margin-bottom: 8px; font-size: 10px; }
+  .services-title{ font-size: clamp(2rem, 8vh, 3rem); }
+  .product-card{ height: 220px; }
+  .product-card .overlay{ padding: 16px; }
+}
