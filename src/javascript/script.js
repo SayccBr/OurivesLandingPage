@@ -13,16 +13,48 @@ document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById("mobile_menu");
     const icon = btn.querySelector("i");
 
-    btn.addEventListener("click", () => {
-        menu.classList.toggle("active");
-        icon.classList.toggle("fa-bars");
-        icon.classList.toggle("fa-xmark");
+    function closeMobileMenu() {
+        menu.classList.remove("active");
+        document.body.classList.remove("menu-open");
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-xmark");
+        btn.setAttribute("aria-expanded", "false");
+        btn.setAttribute("aria-label", "Abrir menu");
+    }
+
+    btn.addEventListener("click", (event) => {
+        event.stopPropagation();
+        const isOpen = menu.classList.toggle("active");
+
+        document.body.classList.toggle("menu-open", isOpen);
+        icon.classList.toggle("fa-bars", !isOpen);
+        icon.classList.toggle("fa-xmark", isOpen);
+        btn.setAttribute("aria-expanded", String(isOpen));
+        btn.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+    });
+
+    menu.addEventListener("click", (event) => {
+        event.stopPropagation();
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!menu.classList.contains("active")) return;
+        if (menu.contains(event.target) || btn.contains(event.target)) return;
+
+        closeMobileMenu();
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && menu.classList.contains("active")) {
+            closeMobileMenu();
+        }
     });
 
     // Jquery Scroll spy para adicionar classe active nos links de navegação
     $(window).on('scroll', function() {
         const header = $('header');
         var scrollPos = $(window).scrollTop() + 100;
+        var currentSection = '#home';
 
         if (scrollPos <= 0) {
             header.css('box-shadow', 'none');
@@ -32,16 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $('#navi_links .navi-item, #mobile_links .mobile-item').removeClass('active');
 
-        $('#navi_links .navi-item a, #mobile_links .mobile-item a').each(function() {
-            var currLink = $(this);
-            var href = currLink.attr("href");
-            if (href !== "#home") {
-                var refElement = $(href);
-                if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                    currLink.parent().addClass('active');
-                }
+        $('main section[id]').each(function() {
+            var section = $(this);
+
+            if (section.position().top <= scrollPos) {
+                currentSection = '#' + section.attr('id');
             }
         });
+
+        $('#navi_links a[href="' + currentSection + '"], #mobile_links a[href="' + currentSection + '"]').parent().addClass('active');
     });
 
     // Smooth scroll para links de navegação
@@ -49,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         var target = $($(this).attr('href'));
         if (target.length) {
             event.preventDefault();
+            closeMobileMenu();
             $('html, body').animate({
                 scrollTop: target.offset().top - 15
             }, 1000);

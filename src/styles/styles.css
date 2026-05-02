@@ -15,6 +15,9 @@
 /* Variáveis de cor (ainda não usada) */
 :root {
     --color-primary: #e9a209;
+    --color-neutral-900: #141414;
+    --header-height: 82px;
+    --safe-top: env(safe-area-inset-top, 0px);
 }
 
 * {
@@ -26,7 +29,9 @@
 }
 
 html {
-
+  overflow-x: hidden;
+  background-color: var(--color-neutral-900);
+  scrollbar-color: rgba(212, 175, 55, 0.55) var(--color-neutral-900);
 }
 
 .playfair-display-chique {
@@ -44,14 +49,76 @@ html {
 }
 
 body{
-  
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  padding-top: calc(var(--header-height) + var(--safe-top));
+  background-color: var(--color-neutral-900);
+}
+
+main {
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden;
+  background-color: var(--color-neutral-900);
 }
 
 section{
     padding: 28px 20%;
+    max-width: 100%;
+    width: 100%;
+}
+
+img,
+iframe {
+    max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-neutral-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.55);
+  border-radius: 999px;
+}
+
+@media (max-width: 1024px) {
+  html {
+    scrollbar-width: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  section {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /* Botão */
+@media (max-width: 1024px) and (max-height: 520px) {
+  body {
+    padding-top: calc(64px + var(--safe-top));
+  }
+}
+
 .btn-default {
     display: inline-flex; /* resolve diferença entre <a> e <button> */
     align-items: center;
