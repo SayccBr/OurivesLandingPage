@@ -180,6 +180,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Configuração do Slick Carousel pego do codepen
     $(document).ready(function(){
+        if (!$('.slider').length || typeof $.fn.slick !== 'function') return;
+
             $('.slider').slick({
                 infinite: true,
                 slidesToShow: 3,
