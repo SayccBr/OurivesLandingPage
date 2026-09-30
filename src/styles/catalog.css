@@ -14,6 +14,33 @@
     align-items: center;
 }
 
+.catalog-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    color: rgba(245, 240, 230, .72);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.catalog-back i {
+    color: #D4AF37;
+    transition: transform .3s ease;
+}
+
+.catalog-back:hover {
+    color: #D4AF37;
+}
+
+.catalog-back:hover i {
+    transform: translateX(-4px);
+}
+
 .catalog-eyebrow {
     margin: 0 0 16px;
     color: #D4AF37;
