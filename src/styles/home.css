@@ -14,15 +14,20 @@
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(10, 10, 10, 0.78) 0%, rgba(10, 10, 10, 0.5) 45%, rgba(10, 10, 10, 0.12) 100%),
-        linear-gradient(0deg, rgba(10, 10, 10, 0.55) 0%, rgba(10, 10, 10, 0) 35%);
+        linear-gradient(90deg, rgba(10, 10, 10, 0.5) 0%, rgba(10, 10, 10, 0.22) 50%, rgba(10, 10, 10, 0) 100%),
+        linear-gradient(0deg, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0) 30%);
     z-index: 0;
+}
+
+#home {
+    padding-left: 12%;
+    padding-right: 12%;
 }
 
 #cta {
     position: relative;
     z-index: 1;
-    width: 75%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -55,6 +60,18 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.55), 0 10px 40px rgba(0, 0, 0, 0.7);
 }
 
+/* Desktop: "Ouro & Tradição" sempre numa linha só, abaixo de "Arte em" */
+@media screen and (min-width: 1025px) {
+    #cta_text h1 {
+        font-size: clamp(4rem, 8vw, 8rem);
+    }
+
+    #cta_text h1 .text-gold {
+        display: block;
+        white-space: nowrap;
+    }
+}
+
 #cta_text h1 .text-gold {
     background: linear-gradient(175deg, #ffe9a6 0%, #e9a209 45%, #b87a06 100%);
     -webkit-background-clip: text;
@@ -66,7 +83,8 @@
 }
 
 #cta_text p {
-    max-width: 54ch;
+    max-width: 90ch;
+    text-wrap: balance;
     padding-left: 18px;
     border-left: 3px solid #D4AF37;
     color: rgba(255, 255, 255, 0.95);
@@ -75,9 +93,9 @@
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 4px 18px rgba(0, 0, 0, 0.65);
 }
 
-/* Entrada em CSS puro: curta e sem depender de JS (o texto nunca fica escondido se o script falhar) */
+/* Entrada da esquerda para a direita, em CSS puro: curta e sem depender de JS (o texto nunca fica escondido se o script falhar) */
 @keyframes heroIn {
-    from { opacity: 0; transform: translateY(18px); }
+    from { opacity: 0; transform: translateX(-48px); }
     to   { opacity: 1; transform: none; }
 }
 
