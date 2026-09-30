@@ -8,12 +8,14 @@
     min-height: calc(100svh - var(--header-height));
 }
 
-/* Overlay escuro opcional para melhorar legibilidade */
+/* Overlay: escurece mais o lado do texto e a base, deixando as joias à direita visíveis */
 #home::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(20, 20, 20, 0.4);
+    background:
+        linear-gradient(90deg, rgba(10, 10, 10, 0.78) 0%, rgba(10, 10, 10, 0.5) 45%, rgba(10, 10, 10, 0.12) 100%),
+        linear-gradient(0deg, rgba(10, 10, 10, 0.55) 0%, rgba(10, 10, 10, 0) 35%);
     z-index: 0;
 }
 
@@ -40,8 +42,61 @@
 
 }
 
-.teste {
-    color: #e9a209; /* laranja */
+/* Dourado em degradê, com sombra projetada para dar peso sobre o fundo */
+.text-gold {
+    color: #e9a209;
+}
+
+#cta_text h1 {
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.02;
+    text-wrap: balance;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.55), 0 10px 40px rgba(0, 0, 0, 0.7);
+}
+
+#cta_text h1 .text-gold {
+    background: linear-gradient(175deg, #ffe9a6 0%, #e9a209 45%, #b87a06 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: none;
+    filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.6)) drop-shadow(0 12px 30px rgba(0, 0, 0, 0.55));
+}
+
+#cta_text p {
+    max-width: 54ch;
+    padding-left: 18px;
+    border-left: 3px solid #D4AF37;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+    line-height: 1.7;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 4px 18px rgba(0, 0, 0, 0.65);
+}
+
+/* Entrada em CSS puro: curta e sem depender de JS (o texto nunca fica escondido se o script falhar) */
+@keyframes heroIn {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: none; }
+}
+
+#cta_text h1,
+#cta_text p,
+#cta_buttons {
+    animation: heroIn 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+#cta_text p { animation-delay: 0.12s; }
+#cta_buttons { animation-delay: 0.24s; }
+
+@media (prefers-reduced-motion: reduce) {
+    #cta_text h1,
+    #cta_text p,
+    #cta_buttons,
+    .arrow {
+        animation: none;
+    }
 }
 
 /* Animação scroll */
@@ -93,7 +148,7 @@
         min-height: calc(100svh - var(--header-height));
         height: auto;
         background-attachment: scroll; /* importante no mobile */    
-        padding: 60px 40px; /* Adiciona espaço nas laterais */
+        padding: 56px 40px 72px;
     }
 
     #cta {
@@ -103,15 +158,17 @@
         margin-top: 0;
     }
 
-    /* Sobrescreve text-8x1 */
+    /* Sobrescreve o text-9xl do Tailwind */
     #cta_text h1 {
-        font-size: 5rem !important; /* text-8xl = 96px / 6rem */
+        font-size: clamp(3.25rem, 10vw, 5rem) !important;
         line-height: 1;
     }
 
     #cta_text p {
         font-size: 1.25rem !important;
         line-height: 1.5;
+        padding-left: 0;
+        border-left: none;
     }
 
     /* Joga a seta um pouco pra baixo*/
@@ -122,7 +179,7 @@
 
 @media screen and (max-width: 480px) {
     #home {
-        padding: 36px 20px 52px;
+        padding: 36px 20px 64px;
     }
 
     #cta {
@@ -150,22 +207,6 @@
 
     #cta_buttons .btn-default span {
         white-space: nowrap;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    #home {
-        padding: 56px 40px 72px;
-    }
-
-    #cta_text h1 {
-        font-size: clamp(3.25rem, 10vw, 5rem) !important;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #home {
-        padding: 36px 20px 64px;
     }
 }
 

@@ -1,17 +1,6 @@
-/* Imports de arquivos CSS */
-@import url('header.css');
-@import url('home.css');
-@import url('collections.css');
-@import url('catalog.css');
-@import url('about.css');
-@import url('services.css');
-@import url('contact.css');
-@import url('footer.css');
+/* Os arquivos CSS e as fontes são carregados via <link> em cada página */
 
-/* Imports de fontes */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
-/* Variáveis de cor (ainda não usada) */
+/* Variáveis de cor */
 :root {
     --color-primary: #e9a209;
     --color-neutral-900: #141414;
