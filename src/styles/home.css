@@ -8,20 +8,19 @@
     min-height: calc(100svh - var(--header-height));
 }
 
-/* Overlay: escurece mais o lado do texto e a base, deixando as joias à direita visíveis */
+/* Overlay escuro uniforme: deixa o fundo suave e mantém o texto legível */
 #home::before {
     content: '';
     position: absolute;
     inset: 0;
-    background:
-        linear-gradient(90deg, rgba(10, 10, 10, 0.5) 0%, rgba(10, 10, 10, 0.22) 50%, rgba(10, 10, 10, 0) 100%),
-        linear-gradient(0deg, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0) 30%);
+    background: rgba(20, 20, 20, 0.4);
     z-index: 0;
 }
 
+/* Desktop: o conteúdo alinha com a borda esquerda do logo do header (container de 1118px) */
 #home {
-    padding-left: 12%;
-    padding-right: 12%;
+    padding-left: max(40px, calc((100% - 1118px) / 2));
+    padding-right: max(40px, calc((100% - 1118px) / 2));
 }
 
 #cta {
