@@ -51,21 +51,9 @@
     color: #e9a209;
 }
 
-.hero-label {
-    display: block;
-    color: #e9a209;
-    font-size: 1.5rem;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 4px 18px rgba(0, 0, 0, 0.65);
-}
-
-/* O "&" mantém a fonte Playfair como detalhe */
-#cta_text h1 .amp {
-    font-weight: 400;
-}
-
 #cta_text h1 {
     font-weight: 600;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
     line-height: 1.02;
     text-wrap: balance;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.55), 0 10px 40px rgba(0, 0, 0, 0.7);
@@ -74,7 +62,7 @@
 /* Desktop: "Ouro & Tradição" sempre numa linha só, abaixo de "Arte em" */
 @media screen and (min-width: 1025px) {
     #cta_text h1 {
-        font-size: clamp(3rem, 6vw, 6rem);
+        font-size: clamp(4rem, 8vw, 8rem);
     }
 
     #cta_text h1 .text-gold {
@@ -110,19 +98,16 @@
     to   { opacity: 1; transform: none; }
 }
 
-.hero-label,
 #cta_text h1,
 #cta_text p,
 #cta_buttons {
     animation: heroIn 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
-#cta_text h1 { animation-delay: 0.08s; }
-#cta_text p { animation-delay: 0.16s; }
-#cta_buttons { animation-delay: 0.28s; }
+#cta_text p { animation-delay: 0.12s; }
+#cta_buttons { animation-delay: 0.24s; }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero-label,
     #cta_text h1,
     #cta_text p,
     #cta_buttons,
@@ -192,7 +177,7 @@
 
     /* Sobrescreve o text-9xl do Tailwind */
     #cta_text h1 {
-        font-size: clamp(2.1rem, 9.2vw, 4.2rem) !important;
+        font-size: clamp(3.25rem, 10vw, 5rem) !important;
         line-height: 1;
     }
 
@@ -265,7 +250,7 @@
     }
 
     #cta_text h1 {
-        font-size: clamp(2.2rem, 7vh, 3.6rem) !important;
+        font-size: clamp(3.25rem, 8vw, 4.75rem) !important;
         line-height: 0.98;
         margin-bottom: 0 !important;
     }
