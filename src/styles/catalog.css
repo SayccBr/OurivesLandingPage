@@ -66,14 +66,12 @@
     line-height: 1.75;
 }
 
-/* Proporção natural da foto (sem corte); alta, para fotos em pé */
+/* Caixa vertical (4:5), enquadrada para mostrar a caixa da aliança inteira */
 .catalog-hero img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: min(80vh, 760px);
-    justify-self: center;
-    object-fit: contain;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 50% 40%;
     border: 1px solid rgba(212, 175, 55, .18);
     box-shadow: 0 28px 80px rgba(0,0,0,.42);
 }
