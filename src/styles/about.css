@@ -23,6 +23,10 @@
     color: #e0e0e0;
 }
 
+.about-tittle .section-subtitle {
+    color: #e9a209;
+}
+
 .about-tittle .section-title {
     text-wrap: balance;
 }
