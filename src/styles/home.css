@@ -84,8 +84,6 @@
 #cta_text p {
     max-width: 90ch;
     text-wrap: balance;
-    padding-left: 18px;
-    border-left: 3px solid #D4AF37;
     color: rgba(255, 255, 255, 0.95);
     font-weight: 500;
     line-height: 1.7;
@@ -184,8 +182,6 @@
     #cta_text p {
         font-size: 1.25rem !important;
         line-height: 1.5;
-        padding-left: 0;
-        border-left: none;
     }
 
     /* Joga a seta um pouco pra baixo*/
