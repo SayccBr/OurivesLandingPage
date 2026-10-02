@@ -23,11 +23,15 @@
     color: #e0e0e0;
 }
 
+.about-tittle .section-subtitle {
+    color: #e9a209;
+}
+
 .about-tittle .section-title {
     text-wrap: balance;
 }
 
-.about-tittle .section-title .teste {
+.about-tittle .section-title .text-gold {
     display: inline-block;
     white-space: nowrap;
 }

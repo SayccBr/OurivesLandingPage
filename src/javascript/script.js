@@ -9,6 +9,8 @@ $(document).ready(function() {
 
 /* JavaScript puro para toggle do menu mobile */
 document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("[data-year]").forEach((el) => { el.textContent = new Date().getFullYear(); });
+
     const btn = document.getElementById("mobile_btn");
     const menu = document.getElementById("mobile_menu");
     const icon = btn.querySelector("i");
@@ -88,12 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }); 
 
     // Scroll reveal para animação de fade-in
-    ScrollReveal().reveal('#cta', {
-        origin: 'left', 
-        duration: 2000,
-        distance: '20%'
-    });
-
     ScrollReveal().reveal('.about-tittle', {
         origin: 'left', 
         duration: 2000,
