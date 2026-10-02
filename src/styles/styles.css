@@ -169,6 +169,11 @@ iframe {
 
 
 
+/* Ícone do WhatsApp em verde em todos os botões */
+.btn-default .fa-whatsapp {
+    color: #4ade80;
+}
+
 .btn-default:hover {
     background-color: #b88322;
     box-shadow: 0 8px 24px rgba(204, 143, 10, 0.3);
