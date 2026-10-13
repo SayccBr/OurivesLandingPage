@@ -204,3 +204,24 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 });
+
+// Zoom nas fotos do mostruário (estilo loja online): amplia e segue o cursor.
+// Só em dispositivos com mouse; no toque a foto fica como está.
+document.addEventListener("DOMContentLoaded", () => {
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+    document.querySelectorAll(".option-visual img").forEach((img) => {
+        const box = img.parentElement;
+        box.classList.add("zoomable");
+
+        box.addEventListener("mousemove", (event) => {
+            const rect = box.getBoundingClientRect();
+            const x = ((event.clientX - rect.left) / rect.width) * 100;
+            const y = ((event.clientY - rect.top) / rect.height) * 100;
+            img.style.transformOrigin = `${x}% ${y}%`;
+        });
+
+        box.addEventListener("mouseenter", () => box.classList.add("is-zooming"));
+        box.addEventListener("mouseleave", () => box.classList.remove("is-zooming"));
+    });
+});

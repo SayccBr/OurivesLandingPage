@@ -381,3 +381,21 @@
         font-size: 1rem;
     }
 }
+
+/* Zoom ao passar o mouse (ativado via JS só em telas com mouse) */
+.option-visual.zoomable {
+    cursor: zoom-in;
+}
+
+.option-visual.zoomable img {
+    transition: transform .2s ease;
+}
+
+.option-card:hover .option-visual.zoomable img {
+    transform: none;
+}
+
+.option-visual.is-zooming img,
+.option-card:hover .option-visual.is-zooming img {
+    transform: scale(2.5);
+}
