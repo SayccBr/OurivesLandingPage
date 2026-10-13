@@ -382,20 +382,39 @@
     }
 }
 
-/* Zoom ao passar o mouse (ativado via JS só em telas com mouse) */
+/* Zoom estilo Mercado Livre: lente sobre a foto + painel ampliado ao lado (ativado via JS) */
 .option-visual.zoomable {
-    cursor: zoom-in;
-}
-
-.option-visual.zoomable img {
-    transition: transform .2s ease;
+    position: relative;
+    cursor: crosshair;
 }
 
 .option-card:hover .option-visual.zoomable img {
     transform: none;
 }
 
-.option-visual.is-zooming img,
-.option-card:hover .option-visual.is-zooming img {
-    transform: scale(2.5);
+.zoom-lens {
+    position: absolute;
+    display: none;
+    background: rgba(255, 255, 255, .22);
+    border: 1px solid rgba(255, 255, 255, .45);
+    pointer-events: none;
+}
+
+.option-visual.is-zooming .zoom-lens {
+    display: block;
+}
+
+.zoom-panel {
+    position: fixed;
+    z-index: 999;
+    display: none;
+    background-color: #141414;
+    background-repeat: no-repeat;
+    border: 1px solid rgba(212, 175, 55, .35);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .6);
+    pointer-events: none;
+}
+
+.zoom-panel.is-visible {
+    display: block;
 }

@@ -205,23 +205,72 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 });
 
-// Zoom nas fotos do mostruário (estilo loja online): amplia e segue o cursor.
-// Só em dispositivos com mouse; no toque a foto fica como está.
+// Zoom nas fotos do mostruário (estilo Mercado Livre): lente cinza sobre a foto
+// e painel grande ao lado com a área ampliada. Só em dispositivos com mouse.
 document.addEventListener("DOMContentLoaded", () => {
     if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
 
-    document.querySelectorAll(".option-visual img").forEach((img) => {
+    const images = document.querySelectorAll(".option-visual img");
+    if (!images.length) return;
+
+    const panel = document.createElement("div");
+    panel.className = "zoom-panel";
+    panel.setAttribute("aria-hidden", "true");
+    document.body.appendChild(panel);
+
+    const LENS_RATIO = 0.4; // lente ocupa 40% da largura da foto
+    const GAP = 16;
+    const HEADER = 90;
+
+    images.forEach((img) => {
         const box = img.parentElement;
+        const lens = document.createElement("div");
+        lens.className = "zoom-lens";
         box.classList.add("zoomable");
+        box.appendChild(lens);
 
-        box.addEventListener("mousemove", (event) => {
+        function update(event) {
             const rect = box.getBoundingClientRect();
-            const x = ((event.clientX - rect.left) / rect.width) * 100;
-            const y = ((event.clientY - rect.top) / rect.height) * 100;
-            img.style.transformOrigin = `${x}% ${y}%`;
-        });
+            const panelW = Math.min(480, window.innerWidth * 0.38);
+            const panelH = panelW * (rect.height / rect.width);
 
-        box.addEventListener("mouseenter", () => box.classList.add("is-zooming"));
-        box.addEventListener("mouseleave", () => box.classList.remove("is-zooming"));
+            const lensW = rect.width * LENS_RATIO;
+            const lensH = lensW * (panelH / panelW);
+            const x = Math.max(0, Math.min(event.clientX - rect.left - lensW / 2, rect.width - lensW));
+            const y = Math.max(0, Math.min(event.clientY - rect.top - lensH / 2, rect.height - lensH));
+            lens.style.cssText = `width:${lensW}px;height:${lensH}px;left:${x}px;top:${y}px`;
+
+            // painel à direita do card; se não couber, vai para a esquerda
+            const card = box.closest(".option-card") || box;
+            const cardRect = card.getBoundingClientRect();
+            let left = cardRect.right + GAP;
+            if (left + panelW > window.innerWidth - GAP) left = cardRect.left - GAP - panelW;
+            const top = Math.max(HEADER, Math.min(rect.top, window.innerHeight - panelH - GAP));
+
+            const scale = panelW / lensW;
+            panel.style.width = `${panelW}px`;
+            panel.style.height = `${panelH}px`;
+            panel.style.left = `${left}px`;
+            panel.style.top = `${top}px`;
+            panel.style.backgroundImage = `url("${img.currentSrc || img.src}")`;
+            panel.style.backgroundSize = `${rect.width * scale}px ${rect.height * scale}px`;
+            panel.style.backgroundPosition = `${-x * scale}px ${-y * scale}px`;
+        }
+
+        box.addEventListener("mouseenter", (event) => {
+            box.classList.add("is-zooming");
+            panel.classList.add("is-visible");
+            update(event);
+        });
+        box.addEventListener("mousemove", update);
+        box.addEventListener("mouseleave", () => {
+            box.classList.remove("is-zooming");
+            panel.classList.remove("is-visible");
+        });
     });
+
+    window.addEventListener("scroll", () => {
+        panel.classList.remove("is-visible");
+        document.querySelectorAll(".option-visual.is-zooming").forEach((el) => el.classList.remove("is-zooming"));
+    }, { passive: true });
 });
