@@ -205,13 +205,50 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 });
 
-// Zoom nas fotos do mostruário (estilo Mercado Livre): lente cinza sobre a foto
-// e painel grande ao lado com a área ampliada. Só em dispositivos com mouse.
+// Fotos do mostruário: no mouse, zoom estilo Mercado Livre (lente cinza sobre a foto
+// e painel grande ao lado); no toque, a foto abre em tela cheia.
 document.addEventListener("DOMContentLoaded", () => {
-    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-
     const images = document.querySelectorAll(".option-visual img");
     if (!images.length) return;
+
+    // Toque (celular/tablet): abre a foto em tela cheia
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        const viewer = document.createElement("div");
+        viewer.className = "photo-viewer";
+        viewer.setAttribute("role", "dialog");
+        viewer.setAttribute("aria-modal", "true");
+        viewer.innerHTML = '<button type="button" class="photo-viewer-close" aria-label="Fechar foto">&times;</button><img alt=""><p class="photo-viewer-caption"></p>';
+        document.body.appendChild(viewer);
+
+        const viewerImg = viewer.querySelector("img");
+        const caption = viewer.querySelector(".photo-viewer-caption");
+
+        function closeViewer() {
+            viewer.classList.remove("is-open");
+            document.body.classList.remove("viewer-open");
+        }
+
+        images.forEach((img) => {
+            img.parentElement.classList.add("tappable");
+            img.addEventListener("click", () => {
+                viewerImg.src = img.currentSrc || img.src;
+                viewerImg.alt = img.alt;
+                const title = img.closest(".option-card")?.querySelector("h4");
+                caption.textContent = title ? title.textContent : "";
+                viewer.classList.add("is-open");
+                document.body.classList.add("viewer-open");
+            });
+        });
+
+        // fecha ao tocar fora da foto, no X ou com Esc
+        viewer.addEventListener("click", (event) => {
+            if (event.target !== viewerImg) closeViewer();
+        });
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") closeViewer();
+        });
+        return;
+    }
 
     const panel = document.createElement("div");
     panel.className = "zoom-panel";

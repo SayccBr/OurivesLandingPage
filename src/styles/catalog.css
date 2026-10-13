@@ -418,3 +418,56 @@
 .zoom-panel.is-visible {
     display: block;
 }
+
+/* Toque: foto em tela cheia */
+.option-visual.tappable {
+    cursor: zoom-in;
+}
+
+.photo-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 56px 12px 24px;
+    background: rgba(8, 8, 8, .96);
+}
+
+.photo-viewer.is-open {
+    display: flex;
+}
+
+.photo-viewer img {
+    max-width: 100%;
+    max-height: calc(100% - 40px);
+    object-fit: contain;
+}
+
+.photo-viewer-caption {
+    margin: 0;
+    color: #f5f0e6;
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+}
+
+.photo-viewer-close {
+    position: absolute;
+    top: calc(10px + env(safe-area-inset-top, 0px));
+    right: 14px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: transparent;
+    color: #f5f0e6;
+    font-size: 2.2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+body.viewer-open {
+    overflow: hidden;
+}
