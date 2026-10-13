@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
         images.forEach((img) => {
             img.parentElement.classList.add("tappable");
             img.addEventListener("click", () => {
-                viewerImg.src = img.currentSrc || img.src;
+                viewerImg.src = img.dataset.zoom || img.currentSrc || img.src;
                 viewerImg.alt = img.alt;
                 const title = img.closest(".option-card")?.querySelector("h4");
                 caption.textContent = title ? title.textContent : "";
@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
             panel.style.height = `${panelH}px`;
             panel.style.left = `${left}px`;
             panel.style.top = `${top}px`;
-            panel.style.backgroundImage = `url("${img.currentSrc || img.src}")`;
+            panel.style.backgroundImage = `url("${img.dataset.zoom || img.currentSrc || img.src}")`;
             panel.style.backgroundSize = `${rect.width * scale}px ${rect.height * scale}px`;
             panel.style.backgroundPosition = `${-x * scale}px ${-y * scale}px`;
         }

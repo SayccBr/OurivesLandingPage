@@ -298,15 +298,6 @@
 .swatch-branco  { background: linear-gradient(100deg, #8d9299, #f2f4f6 40%, #c8ccd2 70%, #8d9299); }
 .swatch-rose    { background: linear-gradient(100deg, #9b5a4a, #f0b9a4 40%, #d98e78 70%, #9b5a4a); }
 
-/* Largura: a espessura da barra representa a largura da aliança/peça */
-.width-bar {
-    display: block;
-    width: 150px;
-    height: var(--h, 12px);
-    border-radius: 3px;
-    background: linear-gradient(180deg, #ffe9a6, #e9a209 50%, #9c6804);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, .4);
-}
 
 .showcase-cta {
     margin-top: 72px;
